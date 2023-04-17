@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for operation in operations %}
+        <p> {{ operations }} </p>
+    {% endfor %}
+    {% if title == "All Operation" %}
+        <a href="http://0.0.0.0:8000/operations/incomes">Incomes</a>
+        <a href="http://0.0.0.0:8000/operations/consumptions">Consumptions</a>
+    {% elif title == "All Incomes" %}
+        <a href="http://0.0.0.0:8000/operations">All operations</a>
+        <a href="http://0.0.0.0:8000/operations/consumptions">Consumptions</a>
+    {% elif title == "All Consumptions" %}
+        <a href="http://0.0.0.0:8000/operations">All operations</a>
+        <a href="http://0.0.0.0:8000/operations/incomes">Incomes</a>
+    {% endif %}
+{% endblock %}

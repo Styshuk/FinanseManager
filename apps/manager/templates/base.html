@@ -1,0 +1,16 @@
+{#{% load static %}#}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{#    <link rel="stylesheet" href="{% static 'css/blog.css' %}">#}
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
